@@ -1,5 +1,5 @@
-identifier: ahokore
-name: ahokore_v2
+identifier: one42
+name: one42
 type: mcu
 arch: arm
 toolchain:

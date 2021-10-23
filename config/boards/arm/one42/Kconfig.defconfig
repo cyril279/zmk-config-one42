@@ -1,13 +1,13 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_AHOKORE
+if BOARD_ONE42
 
 config ZMK_KEYBOARD_NAME
-    default "Ahokore V2"
+    default "One42"
 
 config BOARD
-	default "ahokore"
+	default "one42"
 
 if USB
 
@@ -31,4 +31,4 @@ config ZMK_USB
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
-endif # BOARD_AHOKORE
+endif # BOARD_ONE42
