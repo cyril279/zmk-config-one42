@@ -15,6 +15,14 @@
 #define FUNCT   4
 #define ADJST   5
 
+&sensors {
+     status = "okay";
+     sensors = <&left_encoder &right_encoder>;
+};
+
+&left_encoder { status = "okay"; };
+&right_encoder { status = "disabled"; };
+
 / {
     behaviors {
         hm: homerow_mods {
