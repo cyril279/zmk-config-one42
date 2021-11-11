@@ -10,7 +10,7 @@ If you are looking to dig deeper into ZMK, follow the installation steps in the 
 1. Log into (or sign up for) your personal GitHub account.
 2. Fork this repository ([instructions](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
 3. Edit the (newly forked) one42.keymap file to suit your needs
-4. Once saved/committed, you will need to manually trigger the 'workflow' to start building a new version of your firmware with the updated keymap (see [Firmware files](#firmware-files) for more details).  
+4. Once saved/committed, you might need to manually trigger the 'workflow' to start building a new version of your firmware with the updated keymap (see [Firmware files](#firmware-files) for more details).  
 
 ## Instructions (Git-local)
 1. Log into (or sign up for) your personal GitHub account.
@@ -63,8 +63,23 @@ sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT>;
 west build -p -d build/one42 --board one42 -DZMK_CONFIG="C:/the/absolute/path/config"
 ```
 
+## Bootloader
+The bootloader is flashed to these boards during their assembly, and under normal (ideal) circumstances, that is the only time that the bootloader ever NEEDS to be flashed.  
+In the event that the bootloader is not behaving properly, follow the guidance provided by the [nice!nano troubleshooting documentation](https://nicekeyboards.com/docs/nice-nano/troubleshooting) to address the issues.  
+
+Procedural differences:  
+- Use the labeled header on the board to interface SWCLK & SWDIO (instead of pins on the nice!nano). <- this deserves illustration  
+- Use the bootloader binaries linked in [Resources](#resources).  
+
+The bootloader package provides three files, but we are only interested in the 'bootloader.hex' and the 'update-bootloader.uf2'.  
+If DFU-mode can still be accessed by double-reset (and exposes itself as a storage device), then the bootloader.uf2 can be used to update the bootloader the same way the firmware.uf2 is used to update the firmware of the board.  
+When DFU-mode is no longer accessible, then a programmer is needed to flash the bootloader.hex.  I used an st-link for the initial flash.  See the [nice!nano troubleshooting documentation](https://nicekeyboards.com/docs/nice-nano/troubleshooting) for details.
+
 ## Resources
 - The [One42 hardware](https://github.com/cyril279/keyboards/tree/main/one42) repository. Here are the kicad & gerber files used to fabricate the board.  
 - The [official ZMK Firmware GitHub](https://github.com/zmkfirmware/zmk) repository. View the keymaps for other boards and shields as a starting point for your keymap.  
 - The [official ZMK Documentation](https://zmk.dev/docs) web site. Find the answers to many of your questions about ZMK Firmware.  
 - The [official ZMK Discord Server](https://discord.gg/8cfMkQksSB). Instant conversations with other ZMK developers and users. Great technical resource!  
+- The [Bootloader Source code](https://github.com/cyril279/Adafruit_nRF52_Bootloader/tree/cyril/src/boards/one42) is open and available.
+  - Prebuilt bootloader binaries can be downloaded from the [actions/workflows tab](https://github.com/cyril279/Adafruit_nRF52_Bootloader/actions), just like the firmware.
+  - The [one42Boot.zip DFU bootloader package](./config/boards/arm/one42/one42Boot.zip) can also be downloaded directly from this repository.  
