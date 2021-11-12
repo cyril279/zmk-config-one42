@@ -43,8 +43,8 @@
                        bindings = <
    &kp TAB   &kp Q       &kp W      &kp E       &kp R       &kp T       &kp Y   &kp U       &kp I           &kp O        &kp P    &kp BSPC
    &kp ESC   &kp A       &kp S      &kp D       &kp F       &kp G       &kp H   &kp J       &kp K           &kp L        &kp SEMI &kp SQT
-   &kp LSHFT &hm LCTRL Z &hm LALT X &hm LSHFT C &hm LCTRL V &kp B       &kp N   &hm RCTRL M &hm RSHFT COMMA &hm RALT DOT &kp FSLH &kp RET
-                                &kp K_MUTE &mo LOWER &kp LSHFT &lt NAVIG SPACE &mo RAISE &mo FUNCT
+   &kp LGUI  &hm LCTRL Z &hm LALT X &kp C       &hm LCTRL V &kp B       &kp N   &hm RCTRL M &hm RSHFT COMMA &hm RALT DOT &kp FSLH &kp RET
+                                &kp C_PP &mo LOWER &kp LSHFT &lt NAVIG SPACE &mo RAISE &mo FUNCT
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
@@ -53,7 +53,7 @@
                         bindings = <
    &kp DEL  &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK   &kp LPAR  &kp RPAR  &kp DEL
    &trans   &trans   &trans   &trans   &trans   &trans         &kp TILDE &kp UNDER &kp KP_PLUS &kp LBRC  &kp RBRC  &kp PIPE
-   &trans   &trans   &kp LGUI &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans      &trans    &trans    &trans
+   &trans   &trans   &trans   &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans      &trans    &trans    &trans
                                 &trans   &trans   &trans    &trans    &mo ADJST &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -63,7 +63,7 @@
                         bindings = <
    &kp DEL  &kp N1   &kp N2   &kp N3   &kp N4   &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
    &trans   &trans   &trans   &trans   &trans   &trans         &kp GRAVE &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-   &trans   &trans   &kp LGUI &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans    &trans    &trans    &trans
+   &trans   &trans   &trans   &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans    &trans    &trans    &trans
                                 &trans  &mo ADJST &trans     &trans    &trans    &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
