@@ -24,6 +24,18 @@
 &right_encoder { status = "disabled"; };
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
         keymap {
                 compatible = "zmk,keymap";
 
@@ -31,7 +43,7 @@
                        bindings = <
   &kp TAB   &kp Q       &kp W      &kp E       &kp R       &kp T       &kp Y   &kp U       &kp I           &kp O        &kp P    &kp BSPC
   &kp ESC   &kp A       &kp S      &kp D       &kp F       &kp G       &kp H   &kp J       &kp K           &kp L        &kp SEMI &kp SQT
-  &kp LGUI  &kp Z       &kp X      &kp C       &kp V       &kp B       &kp N   &kp M       &kp COMMA       &kp DOT      &kp FSLH &mt RSHFT RET 
+  &kp LGUI  &hm LCTRL Z &hm LALT X &hm LSHFT C &hm LCTRL V &kp B       &kp N   &hm RCTRL M &hm RSHFT COMMA &hm LALT DOT &kp FSLH &kp RET
                                          &kp C_PP &kp LSHFT &mo LOWER &mo RAISE &lt NAVIG SPACE &mo FUNCT
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -41,7 +53,7 @@
                         bindings = <
   &kp DEL  &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK   &kp LPAR  &kp RPAR  &kp DEL
   &trans   &trans   &kp LGUI &trans   &trans   &trans         &kp TILDE &kp UNDER &kp KP_PLUS &kp LBRC  &kp RBRC  &kp PIPE
-  &trans   &kp LCTRL &kp LALT &kp LSHFT &kp LCTRL &kp CLCK    &kp PSCRN &kp RCTRL &kp RSHFT   &kp RALT  &trans    &trans
+  &trans   &trans   &trans   &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans      &trans    &trans    &trans
                                 &kp C_MUTE &trans   &trans &mo ADJST &trans    &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -51,7 +63,7 @@
                         bindings = <
   &kp DEL  &kp N1   &kp N2   &kp N3   &kp N4   &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
   &trans   &trans   &kp LGUI &trans   &trans   &trans         &kp GRAVE &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-  &trans   &kp LCTRL &kp LALT &kp LSHFT &kp LCTRL &kp CLCK    &kp PSCRN &kp RCTRL &kp RSHFT &kp RALT  &trans    &trans
+  &trans   &trans   &trans   &trans   &trans   &kp CLCK       &kp PSCRN &trans    &trans    &trans    &trans    &trans
                                 &kp C_MUTE &trans &mo ADJST &trans    &trans    &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
