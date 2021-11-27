@@ -39,18 +39,18 @@
     combos {
         compatible = "zmk,combos";
         combo_lctrl {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <14 15>;
             bindings = <&kp LCTRL>;
         };
         combo_rctrl {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <20 21>;
             bindings = <&kp RCTRL>;
         };
 
         combo_bspc {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <8 9>;
             bindings = <&kp BSPC>;
         };
