@@ -38,21 +38,27 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_lctrl {
+        combo_tab {
             timeout-ms = <30>;
-            key-positions = <14 15>;
-            bindings = <&kp LCTRL>;
-        };
-        combo_rctrl {
-            timeout-ms = <30>;
-            key-positions = <20 21>;
-            bindings = <&kp RCTRL>;
+            key-positions = <2 3>;
+            bindings = <&kp TAB>;
         };
 
         combo_bspc {
             timeout-ms = <30>;
             key-positions = <8 9>;
             bindings = <&kp BSPC>;
+        };
+
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <14 15>;
+            bindings = <&kp ESC>;
+        };
+        combo_rctrl {
+            timeout-ms = <30>;
+            key-positions = <20 21>;
+            bindings = <&kp RCTRL>;
         };
 
         combo_rdel {
