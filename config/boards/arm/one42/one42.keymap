@@ -66,6 +66,12 @@
             key-positions = <32 33>;
             bindings = <&kp DEL>;
         };
+
+        combo_ldel {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp DEL>;
+        };
     };
 };
 
@@ -77,7 +83,7 @@
             bindings = <
                 &kp TAB   &kp Q       &kp W      &kp E       &kp R       &kp T       &kp Y   &kp U       &kp I           &kp O        &kp P    &kp BSPC
                 &kp ESC   &kp A       &kp S      &kp D       &kp F       &kp G       &kp H   &kp J       &kp K           &kp L        &kp SEMI &kp SQT
-                &kp LGUI  &hm LCTRL Z &hm LALT X &hm LSHFT C &hm LCTRL V &kp B       &kp N   &hm RCTRL M &hm RSHFT COMMA &hm LALT DOT &kp FSLH &kp RET
+                &kp LGUI  &hm LCTRL Z &hm LALT X &hm LSHFT C &hm LCTRL V &kp B       &kp N   &kp M       &hm RSHFT COMMA &hm LALT DOT &kp FSLH &kp RET
                                                        &kp C_PP &kp LSHFT &mo LOWER &mo RAISE &lt NAVIG SPACE &mo FUNCT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
