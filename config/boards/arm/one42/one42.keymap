@@ -72,6 +72,12 @@
             key-positions = <26 27>;
             bindings = <&kp DEL>;
         };
+
+        combo_enter {
+            timeout-ms = <70>;
+            key-positions = <21 22>;
+            bindings = <&kp ENTER>;
+        };
     };
 };
 
