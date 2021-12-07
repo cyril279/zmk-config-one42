@@ -56,8 +56,8 @@
             bindings = <&kp ESC>;
         };
         combo_rctrl {
-            timeout-ms = <30>;
-            key-positions = <20 21>;
+            timeout-ms = <70>;
+            key-positions = <21 22>;
             bindings = <&kp RCTRL>;
         };
 
@@ -74,8 +74,8 @@
         };
 
         combo_enter {
-            timeout-ms = <70>;
-            key-positions = <21 22>;
+            timeout-ms = <40>;
+            key-positions = <20 21>;
             bindings = <&kp ENTER>;
         };
     };
