@@ -45,9 +45,10 @@
         };
 
         combo_bspc {
-            timeout-ms = <30>;
-            key-positions = <8 9>;
+            timeout-ms = <70>;
+            key-positions = <32 33>;
             bindings = <&kp BSPC>;
+            layers = <0>;
         };
 
         combo_esc {
@@ -62,9 +63,10 @@
         };
 
         combo_rdel {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             key-positions = <32 33>;
             bindings = <&kp DEL>;
+            layers = <1 2>;
         };
 
         combo_ldel {
