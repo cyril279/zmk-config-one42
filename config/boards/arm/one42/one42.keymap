@@ -43,42 +43,37 @@
             key-positions = <2 3>;
             bindings = <&kp TAB>;
         };
-
-        combo_bspc {
-            timeout-ms = <70>;
-            key-positions = <32 33>;
-            bindings = <&kp BSPC>;
-            layers = <0>;
-        };
-
         combo_esc {
             timeout-ms = <30>;
             key-positions = <14 15>;
             bindings = <&kp ESC>;
+        };
+        combo_ldel {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp DEL>;
+        };
+        combo_enter {
+            timeout-ms = <40>;
+            key-positions = <20 21>;
+            bindings = <&kp ENTER>;
         };
         combo_rctrl {
             timeout-ms = <70>;
             key-positions = <21 22>;
             bindings = <&kp RCTRL>;
         };
-
+        combo_bspc {
+            timeout-ms = <70>;
+            key-positions = <32 33>;
+            bindings = <&kp BSPC>;
+            layers = <0>;
+        };
         combo_rdel {
             timeout-ms = <70>;
             key-positions = <32 33>;
             bindings = <&kp DEL>;
             layers = <1 2>;
-        };
-
-        combo_ldel {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp DEL>;
-        };
-
-        combo_enter {
-            timeout-ms = <40>;
-            key-positions = <20 21>;
-            bindings = <&kp ENTER>;
         };
     };
 };
