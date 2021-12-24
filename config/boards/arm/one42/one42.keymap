@@ -50,7 +50,7 @@
         };
         combo_ldel {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <27 28>;
             bindings = <&kp DEL>;
         };
         combo_enter {
@@ -65,13 +65,13 @@
         };
         combo_bspc {
             timeout-ms = <70>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
             bindings = <&kp BSPC>;
             layers = <0>;
         };
         combo_rdel {
             timeout-ms = <70>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
             bindings = <&kp DEL>;
             layers = <1 2>;
         };
