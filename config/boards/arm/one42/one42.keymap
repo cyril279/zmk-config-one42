@@ -74,8 +74,8 @@
         navig_layer {
             bindings = <
                 &kp DEL  &trans   &trans   &trans   &trans   &trans          &trans   &trans   &trans    &trans    &trans    &kp DEL
-                &trans   &trans   &kp LGUI &trans   &trans   &trans          &trans   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
-                &trans   &trans   &trans   &trans   &trans   &kp CLCK        &trans   &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans
+                &trans   &trans   &kp LGUI &trans   &trans   &trans          &trans   &kp LEFT &kp UP    &kp RIGHT &kp PG_UP &trans
+                &trans   &trans   &trans   &trans   &trans   &kp CLCK        &trans   &kp HOME &kp DOWN  &kp END   &kp PG_DN &trans
                                             &trans   &trans   &trans     &trans   &trans   &trans
             >;
         };
