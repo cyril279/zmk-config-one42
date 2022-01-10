@@ -48,3 +48,17 @@ jobs:
         with:
           name: firmware
           path: one42.uf2
+      - name: West Build One42_reset
+        run: west build -s zmk/app -b one42 -- -DSHIELD=settings_reset 
+      - name: One42 DTS File
+        if: ${{ always() }}
+        run: cat -n build/zephyr/one42.dts.pre.tmp
+      - name: One42_reset Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 one42_reset.uf2
+      - name: Archive (one42_reset)
+        uses: actions/upload-artifact@v2
+        with:
+          name: firmware
+          path: one42_reset.uf2
