@@ -48,6 +48,11 @@
             key-positions = <14 15>;
             bindings = <&kp ESC>;
         };
+        combo_lbspc {
+            timeout-ms = <70>;
+            key-positions = <26 27>;
+            bindings = <&kp BSPC>;
+        };
         combo_ldel {
             timeout-ms = <70>;
             key-positions = <27 28>;
@@ -63,17 +68,15 @@
             key-positions = <21 22>;
             bindings = <&kp RCTRL>;
         };
-        combo_bspc {
+        combo_rbspc {
             timeout-ms = <70>;
             key-positions = <31 32>;
             bindings = <&kp BSPC>;
-            layers = <0>;
         };
         combo_rdel {
             timeout-ms = <70>;
-            key-positions = <31 32>;
+            key-positions = <32 33>;
             bindings = <&kp DEL>;
-            layers = <1 2>;
         };
     };
 };
