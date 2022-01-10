@@ -94,9 +94,9 @@
 
         lower_layer {
             bindings = <
-                &kp DEL  &trans   &kp AMPS &kp ASTRK &kp LPAR  &trans         &trans    &trans    &trans      &trans    &trans    &kp DEL
-                &trans   &kp LGUI &kp DLLR &kp PRCNT &kp CARET &kp RPAR       &kp TILDE &kp UNDER &kp KP_PLUS &kp LBRC  &kp RBRC  &kp PIPE
-                &trans   &trans   &kp EXCL &kp AT    &kp HASH  &kp CLCK       &kp PSCRN &trans    &trans      &trans    &trans    &trans
+                &kp DEL  &trans   &kp AMPS &kp ASTRK &kp LPAR  &trans         &trans    &kp RBRC  &kp PLUS  &kp LBRC  &trans    &kp DEL
+                &trans   &kp LGUI &kp DLLR &kp PRCNT &kp CARET &kp RPAR       &trans    &trans    &kp UNDER &trans    &trans    &kp PIPE
+                &trans   &kp CLCK &kp EXCL &kp AT    &kp HASH  &trans         &kp PSCRN &trans    &kp TILDE &trans    &trans    &trans
                                               &kp C_MUTE &trans    &mo ADJST &trans    &trans    &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -104,9 +104,9 @@
 
         raise_layer {
             bindings = <
-                &kp DEL  &trans   &kp N7   &kp N8   &kp N9   &trans         &trans    &trans    &trans    &trans    &trans    &kp DEL
-                &trans   &kp LGUI &kp N4   &kp N5   &kp N6   &kp N0         &kp GRAVE &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-                &trans   &trans   &kp N1   &kp N2   &kp N3   &kp CLCK       &kp PSCRN &trans    &trans    &trans    &trans    &trans
+                &kp DEL  &trans   &kp N7   &kp N8   &kp N9   &trans         &trans    &kp LBKT  &kp EQUAL &kp RBKT  &trans    &kp DEL
+                &trans   &kp LGUI &kp N4   &kp N5   &kp N6   &kp N0         &trans    &kp LPAR  &kp MINUS &kp RPAR  &trans    &kp BSLH
+                &trans   &kp CLCK &kp N1   &kp N2   &kp N3   &trans         &kp PSCRN &trans    &kp GRAVE &trans    &trans    &trans
                                             &kp C_MUTE &trans    &trans    &mo ADJST &trans    &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
