@@ -82,9 +82,9 @@
 
         funct_layer {
             bindings = <
-                &kp DEL  &trans   &trans   &trans   &trans   &trans          &trans   &trans   &trans   &trans   &trans   &kp DEL
-                &trans   &trans   &trans   &trans   &trans   &trans          &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6
-                &trans   &trans   &trans   &trans   &trans   &trans          &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+                &kp DEL  &trans   &trans   &trans   &trans   &trans          &trans   &kp F9   &kp F10  &kp F11  &kp F12  &kp DEL
+                &trans   &trans   &trans   &trans   &trans   &trans          &trans   &kp F5   &kp F6   &kp F7   &kp F8   &trans
+                &trans   &trans   &trans   &trans   &trans   &trans          &trans   &kp F1   &kp F2   &kp F3   &kp F4   &trans
                                             &trans   &trans   &trans     &trans   &trans   &trans
             >;
         };
