@@ -97,7 +97,7 @@
 
         lower_layer {
             bindings = <
-                &kp DEL  &trans   &kp AMPS &kp ASTRK &kp LPAR  &trans         &trans    &kp RBRC  &kp PLUS  &kp LBRC  &trans    &kp DEL
+                &kp DEL  &trans   &kp AMPS &kp ASTRK &kp LPAR  &trans         &trans    &kp LBRC  &kp PLUS  &kp RBRC  &trans    &kp DEL
                 &trans   &kp LGUI &kp DLLR &kp PRCNT &kp CARET &kp RPAR       &trans    &trans    &kp UNDER &trans    &trans    &kp PIPE
                 &trans   &kp CLCK &kp EXCL &kp AT    &kp HASH  &trans         &kp PSCRN &trans    &kp TILDE &trans    &trans    &trans
                                               &kp C_MUTE &trans   &trans &mo ADJST &trans    &trans
