@@ -1,64 +1,6 @@
 
 on: [push, pull_request, workflow_dispatch]
 
-name: Build
-
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container:
-      image: zmkfirmware/zmk-build-arm:2.5
-    name: Build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Cache west modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-zephyr-modules
-        with:
-          path: |
-            modules/
-            tools/
-            zephyr/
-            bootloader/
-            zmk/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: West Init
-        run: west init -l config
-      - name: West Update
-        run: west update
-      - name: West Zephyr export
-        run: west zephyr-export
-      - name: West Build One42
-        run: west build -s zmk/app -b one42 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: One42 DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/one42.dts.pre.tmp
-      - name: One42 Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 one42.uf2
-      - name: Archive (one42)
-        uses: actions/upload-artifact@v2
-        with:
-          name: firmware
-          path: one42.uf2
-      - name: West Build One42_reset
-        run: west build -s zmk/app -b one42 -- -DSHIELD=settings_reset 
-      - name: One42 DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/one42.dts.pre.tmp
-      - name: One42_reset Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 one42_reset.uf2
-      - name: Archive (one42_reset)
-        uses: actions/upload-artifact@v2
-        with:
-          name: firmware
-          path: one42_reset.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
