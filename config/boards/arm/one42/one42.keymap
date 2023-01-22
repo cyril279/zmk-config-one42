@@ -20,7 +20,8 @@
      sensors = <&left_encoder &right_encoder>;
 };
 
-&left_encoder { status = "okay"; };
+// &left_encoder { status = "okay"; };
+&left_encoder { status = "disabled"; };
 &right_encoder { status = "disabled"; };
 
 / {
