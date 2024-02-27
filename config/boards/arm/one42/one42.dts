@@ -6,6 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
+#include "one42-pinctrl.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -111,8 +112,8 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) 
 &i2c0 {
 	status = "disabled";
 	compatible = "nordic,nrf-twi";
-	sda-pin = <21>;
-	scl-pin = <19>;
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-1 = <&i2c0_sleep>;
 
 	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
@@ -133,14 +134,12 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) 
 };
 
 &uart0 {
- 	compatible = "nordic,nrf-uarte";
- 	status = "disabled";
- 	current-speed = <115200>;
- 	tx-pin = <16>;
- 	rx-pin = <14>;
- 	rts-pin = <13>;
-	cts-pin = <15>;
- };
+	compatible = "nordic,nrf-uarte";
+	status = "disabled";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart0_default>;
+	pinctrl-1 = <&uart0_sleep>;
+};
 
 &usbd {
 	status = "okay";
