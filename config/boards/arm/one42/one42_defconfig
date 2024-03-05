@@ -23,3 +23,6 @@ CONFIG_FLASH_MAP=y
 # Enable encoder
 CONFIG_EC11=y
 CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
+
+# Enable USB Boot protocol support
+CONFIG_ZMK_USB_BOOT=y
