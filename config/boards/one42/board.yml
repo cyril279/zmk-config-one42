@@ -1,0 +1,5 @@
+board:
+  name: one42
+  vendor: b_sides
+  socs:
+    - name: nrf52840

@@ -6,9 +6,6 @@ if BOARD_ONE42
 config ZMK_KEYBOARD_NAME
     default "One42"
 
-config BOARD
-	default "one42"
-
 if USB
 
 config USB_NRFX
