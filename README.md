@@ -60,7 +60,7 @@ sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT>;
 ## Standard Build (local setup)
 
 ```
-west build -p -d build/one42 --board one42 -DZMK_CONFIG="C:/the/absolute/path/config"
+west build -p -d build/one42 --board one42 -- -DZMK_CONFIG="C:/the/absolute/path/config"
 ```
 
 ## Bootloader
